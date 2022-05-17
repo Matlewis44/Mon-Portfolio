@@ -1,0 +1,386 @@
+html {
+	background: white;
+}
+
+
+body {
+	/*min-height: 100%;
+	size: 120%;*/
+	width: 100%;
+	padding: 0;
+	background: white;
+   	background-size: 100% auto;
+	background-repeat: repeat;
+	margin: 0;
+}
+#brand img {
+	background-color: black;
+	height: 60px;
+}
+.alert {
+	padding: 10px;
+	margin: 30px 0;
+	color: white;
+	border-radius: 5px;
+}
+
+
+.error {
+	background-color: red;
+}
+
+#navigation {
+	width: 1000px;
+	margin-left: auto;
+	margin-bottom: 30px;
+	margin-right: auto;
+	background:#000000;
+	background-repeat: repeat;
+}
+
+#navigation ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;/*#050727*/
+	background-repeat: repeat;
+}
+
+#navigation li {
+	float:left;
+	margin:auto;
+	padding:0;
+	background-color:black;
+	background-repeat: repeat;
+}
+
+/*le texte du menu*/
+#navigation li a {
+	font-family: serif;
+	font-size: 1.3em ;
+	display:block;
+	color:#F5F5F5;
+	text-align: center;
+	text-decoration:none;
+	padding: 10px 25px;
+}
+
+#navigation li a:hover {
+	font-size: 1.4em ;
+    color:#3030ea;
+}
+
+
+
+
+
+/*#bouton {
+	font-family: "Heroes-Legend";
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	border: 2px solid #999;
+	border-color: #050727;
+	background-color: #FFFFFF;
+}*/
+
+#boutons input:hover { 
+    color:#3030ea;
+}
+
+#bas {
+	background-color: #050727;
+	margin-top: 75px;
+	min-height: 70px;
+}
+
+
+/*@font-face {
+	font-family: "Heroes-Legend";
+	src: url('Heroes-Legend.ttf');
+}*/
+@font-face {
+	font-family: "Kindergarten";
+	src: url('Kindergarten.ttf');
+}
+
+/*  ----------------- MEMBRE.PHP  ------------------------- */
+.table-membre {
+	margin-left: 30%;
+	margin-right: 11%;
+}
+
+.accueil-membre {
+	background-color: #000000;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 16px 24px;
+	text-align: center;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 50%;
+  
+  }
+  
+  .accueil-membre:disabled {
+	pointer-events: none;
+  }
+  
+  .accueil-membre:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+  }
+  
+  .accueil-membre:active {
+	box-shadow: none;
+	transform: translateY(0);
+  }
+  #button-listemembre{
+	margin-left: 77%;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1650px) {
+    .table-membre {
+		margin-left: 10%;
+		margin-right: 7%;
+	}
+
+	.accueil-membre {
+		padding: 10px 10px;
+		width: 70%;
+	  
+	  }
+
+	#button-listemembre{
+		margin-left: 78%;
+		margin-bottom: 10px;
+	}
+	
+	
+}
+
+
+
+
+  /*  ----------------- PUBLIER_ARTICLE.PHP  ------------------------- */
+.content-publier .table-publier{
+
+	background-color: white;
+	border: 3px solid;
+	height: 70%;
+	width: 30%;
+	margin-left: 35%;
+	margin-right: 25%;  
+	margin-top: 2%;
+	  
+}
+
+
+legend{
+	text-align: center;	
+	margin-top: 2%;
+}
+
+
+.accueil-publierArticle{
+	background-color: #000000;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 16px 24px;
+	text-align: center;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 10%;
+	margin-left: 77%;
+  
+}
+
+.accueil-publierArticle:disabled {
+	pointer-events: none;
+  }
+  
+  .accueil-publierArticle:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+  }
+  
+  .accueil-publierArticle:active {
+	box-shadow: none;
+	transform: translateY(0);
+  }
+
+  .ListeArticle-button{
+	background-color: #000000;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 16px 24px;
+	text-align: center;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 10%;
+	margin-left: 77%;
+  
+}
+
+.ListeArticle-button:disabled {
+	pointer-events: none;
+  }
+  
+  .ListeArticle-button:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+  }
+  
+  .ListeArticle-button:active {
+	box-shadow: none;
+	transform: translateY(0);
+  }
+
+  @media (max-width: 1650px) {
+    .content-publier .table-publier{
+
+		background-color: white;
+		border: 3px solid;
+		height: 70%;
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;  
+		margin-top: 2%;
+		  
+	}
+
+	.ListeArticle-button{
+		width: 12%;
+	  
+	}
+
+	.accueil-publierArticle{
+		width: 12%;
+	  
+	}
+	
+	
+}
+
+
+  /*  ----------------- products.PHP  ------------------------- */
+  .table-products{
+	margin-left:2%;
+	margin-right:2%;
+	padding: 25%;
+
+  }
+
+  .table-products td{
+	  padding: 10px;
+  }
+
+  .publie-article-button {
+	background-color: #000000;
+	border: 2px solid #1A1A1A;
+	border-radius: 15px;
+	color: #FFFFFF;
+	font-size: 0.80em;
+	font-weight: 600;
+	padding: 10px 24px;
+	text-align: center;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 20%;
+  
+  }
+  
+  #button-listearticle{
+	  margin-left: 2%;
+	  margin-bottom: 10px;
+  }
+  .publie-article-button:disabled {
+	pointer-events: none;
+  }
+  
+  .publie-article-button:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+  }
+  
+  .publie-article-button:active {
+	box-shadow: none;
+	transform: translateY(0);
+  }
+  
+  
+  .accueil-article {
+	  background-color: #000000;
+	  border: 2px solid #1A1A1A;
+	  border-radius: 15px;
+	  color: #FFFFFF;
+	  font-size: 0.80em;
+	  font-weight: 600;
+	  padding: 10px 24px;
+	  text-align: center;
+	  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	  user-select: none;
+	  -webkit-user-select: none;
+	  touch-action: manipulation;
+	  width: 20%;
+	
+	}
+	
+	.accueil-article:disabled {
+	  pointer-events: none;
+	}
+	
+	.accueil-article:hover {
+	  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	  transform: translateY(-2px);
+	}
+	
+	.accueil-article:active {
+	  box-shadow: none;
+	  transform: translateY(0);
+	}
+
+#scroll_to_top{
+	height: 0px;
+}
+
+@media (max-width: 1650px) {
+	.table-products{
+		margin-left:2%;
+		margin-right:2%;
+		padding: 0;
+	
+	  }
+
+	  .table-products td{
+		padding: 0px;
+		font-size: 0.80em;
+
+		
+	}
+	
+	
+}
+
+  /*  ----------------- brand search  ------------------------- */
+

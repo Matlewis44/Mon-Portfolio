@@ -1,0 +1,1 @@
+<?php header('Location: espace_commun/accueilCommun.php?accueil=1'); ?>

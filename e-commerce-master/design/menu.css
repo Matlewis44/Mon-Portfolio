@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+*{
+	font-family: 'Barlow', sans-serif ;
+}
+
+nav{
+    /*width: 100%;*/
+    margin: 0 ;
+    /*top:0px;*/
+    /*position: sticky;*/
+
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0, 0.5);
+    font-size: 1.1em;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 1650px) {
+    nav{
+        margin-top: 4px;
+    }
+}
+
+
+nav ul{
+    list-style-type: none;
+    display: inline;
+
+}
+nav li{
+    list-style-type: none;
+
+}
+
+/*  ----------------- CONTENT MENU  ------------------------- */
+.menucontent {
+    width: 100%;
+    height: 5%;
+    cursor: pointer;
+    background-color: #4fc0a6;
+    position:absolute;
+
+
+}
+
+@media (max-width: 1650px) {
+    .menucontent {
+        height: 7%;
+    }
+}
+
+li .menu {
+
+    margin-left: 38%;
+
+}
+
+
+/*  ----------------- FIN CONTENT MENU  ------------------------- */
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.menu{
+    color: white!important;
+}
+
+nav a:hover{
+    /*color: orange;
+    border-bottom: 2px solid gold;*/
+    font-weight: bold;
+}
+nav li,.menu{
+	
+	display: inline;
+	margin: 20px;
+	position: relative;
+    
+}
+
+.submenu{
+    display: none;
+    background-color: white !important;
+    color: black !important;
+    float: none;
+    width: 100%;
+    text-align: left;
+    margin-left: 23%;
+    z-index: 1; /*permet au sous-menu de passer par le message sucess; */
+}
+
+nav > ul li:hover .submenu{
+    display: block;
+}
+
+
+.submenu a{
+    border-bottom: none;
+    color: black !important;
+}
+
+.submenu a:hover{
+    border-bottom: none;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+
+
+.submenu{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+}
+
+nav ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 1650px) {
+    .submenu{
+        width: 120%;
+    }
+}
+
+
+
+
+@media (max-width: 1060px){
+    #brand{
+        padding-left: 25px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checbox{
+        display: block;
+        margin-right: 40px;
+    }
+    img{
+        height: 400px;
+    }
+    .menu ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #deco{
+        margin-left: 15%;
+    }
+    button{
+        display: inline-block;
+    }
+    
+}
+
+/*  ----------------- CONTENT SEARCH DROPDOWN  ------------------------- */
+
+.searchcontent{
+    text-align: center;
+    padding: 1%;
+    margin-top: 3%;
+    
+    
+}
+
+
+
+select{
+    border: 1px solid rgb(202, 202, 202);
+    width: 15%;
+    text-align: left;
+    height: 42px;
+    border-right: none;
+    border-left: none;
+    color: #666;
+    background-color: transparent;
+}
+
+#search-button{
+    border: 1px solid rgb(202, 202, 202);
+    height: 42px;
+    width: 10%;
+    border-radius: 15px;
+    margin-left: 2%;
+    color: #2d2d2d;
+    font-weight: 700;
+}
+
+#label-search{
+    margin-left: 2%;
+}
+
+#searchcategorie{
+    color :#666;
+    margin-top: 2%;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README</title>
+</head>
+<body>
+    <link rel='stylesheet' href='stylesheet.css' />
+		<div style='width: 100%; height: 57px; background-color: #000000;'>
+		<div id='navigation'>
+			<ul>	
+				<li><a href='simulation.php'>Simulation</a></li>
+	
+				<li><a href='historique.php'>Historique</a></li>
+					
+				<li><a href='admin.php'>Admin</a></li>
+
+				<li><a href='README.html'>README</a></li>
+			</ul>
+		</div><!-- #navigation --></div>
+
+    <!-- CONTAINER -->
+    <div style="padding-left: 10px;">
+
+        <div id="description">
+            <h1>Description</h1>
+            <p style="padding-left: 10px;">
+                Cette application web a pour objectif de permettre aux utilisateurs d'effectuer des simulations bancaires et de pouvoir consulter un historique dans lequel sont listées leurs simulations.
+            </p>
+        </div>
+        <div id="objectif">
+            <h2>Objectif</h2>
+            <p  style="padding-left: 10px;">
+                Cette application web a pour objectif de permettre à tout utilisateur de démarrer la simulation d'un prêt bancaire et de pouvoir consulter un historique des simulations effectuées dans une archive.<br>
+                De plus l'application web permet à un utilisateur particulier (admin) d'accéder au backend du site lui permettant notamment de consulter un journal d'activité où se trouvent les adresses IP des personnes ayant utilisé le site, les paramètres utilisés dans le formulaire de simulation dans le cas où l'utilisateur a validé le formulaire et avec la date de la simulation.<br>
+                De plus, le login et le mot de passe de l'admin doivent être stocké dans un fichier avec le mot de passe crypté.<br>
+                L'admin doit également pouvoir supprimer le journal d'activité ou bien l'archiver de manière à en créer un autre vide.<br> 
+                L'application n'utilise aucune base de données.
+            </p>
+        </div>
+        <div id="installation">
+            <h2>Installation</h2>
+            <p style="padding-left: 10px;">
+                Pour pouvoir utilisé l'application, il n'y a aucune installation a effectué sur l'ordinateur de l'utilisateur.<br>
+                L'utilisateur doit se rendre à l'adresse suivante : <a>https://www.ProjetPHP.net/</a><br> <!--Adresse à modifier quand on aura mit sur le serveur de l'Iut-->
+                Une fois sur le site l'utilisateur peut librement naviguer dans le menu en cliquant sur les différents onglets proposés en fonction des tâches qu'il souhaite effectuer.
+            </p>
+        </div>
+        <div id="fonctionnement_détail_des_fichiers">
+            <h2>Fonctionnement</h2>
+                <h3 style="padding-left: 5px;">mesFonctions</h3>
+                <p style="padding-left: 10px;">
+                    mesFonctions.php est le fichier comportant toutes les fonctions qui sont utilisées dans plusieurs autres fichiers.<br>
+                    On retrouve parmis ces fonctions :
+                    <ul>
+                        <li>initMenu :  initMenu se retrouve dans toutes les pages .php et .html du projet. Cette fonction permet tout simplement d'afficher le menu les différents boutons de navigation : 
+                            <ul>
+                            <li>Simulation</li>
+                            <li>historique</li>
+                            <li>admin</li>
+                            <li>Readme</li>
+                            </ul>
+                        </li>
+                        <img class="block" src="image/bandeau.png" width="1200">
+                        <li>initStatut : initStatut permet de dire bonjour à l'utilisateur qui se connecte sur la page admin (ce sera toujours "Bonjour Admin" qui sera affiché car il s'agit du seul super utilisateur enregistrer.)<br>
+                            De plus, cette fonction permet d'afficher le bouton Déconnexion qui permet donc au super utilisateur de se déconnecter du mode admin.
+                        </li>
+                        <img class="block" src="image/Screenshot_3.png" width="1200"> 
+                        <li>supprcsv: la fonction qui permet la suppression de la ligne quand on depasse les 10 enregistrements dans l’historique</li>
+                        <li>nombrepositive : [...]</li>
+                        <li>archivage : archivage permet à l'admin d'archiver les données contenues dans l'historique des simulations. Le nom de l'archive prend la date du jour.</li>
+                    </ul>
+                </p>
+                <h3  style="padding-left: 5px;">Simulation :</h3>
+                <p style="padding-left: 10px;">
+                    <ul>
+                        <li>simulation.php</li>
+                        <li>mesFonctions.php</li>
+                    </ul>
+
+                    C'est ici que sont réalisées les simulations de prêt bancaire.<br>
+                    L'utilisateur voulant réaliser une simulation devra rentrer différentes informations dans les zones de texte:
+                    <ul>
+                        <li>somme à emprunter: la somme qu'il souhaite emprunter</li>
+                        <li>taux d'intérêt: le taux d'intérêt appliqué</li>
+                        <li>période en mois: la période de remboursement mensuelle</li>
+                    </ul>
+                    Une fois ces valeurs enregistrées, si ces dernières sont valides et ne sont pas erronées, il pourra cliquer sur le bouton valider qui lancera le calcul puis affichera le résultat en bas de la page dans une zone "Résultat" qui apparaît quand l'utilisateur clique sur le bouton valider.<br><br>
+                    <p class="block"><b>Page simulation avant utilisation.</b></p>
+                    <img  src="image/Screenshot_5.png" width="800"><br>
+                    <p class="block"><b>Page simulation pendant la simulation.</b></p>
+                    <img src="image/Screenshot_1.png" width="800"><br>
+                    <p class="block"><b>Page simulation une fois la simulation effectué.</b></p>
+                    <img src="image/Screenshot_2.png" width="800"><br><br>
+                    Les différentes données rentrées pour le calcul ainsi que le résultat de celui-ci sont stockés dans un fichier "fichier.csv".<br>
+                    Si 10 simulations ont déjà été effectuées, la plus ancienne simulation stockée est supprimée pour laisser place à la dernière simulation effectuée. 
+                </p>
+                <h3 style="padding-left: 5px;">Historique :</h3>
+                <p style="padding-left: 10px;">
+                    <ul>
+                        <li>historique.php: la page qui affiche l'historique</li>
+                        <li>mesFonctions.php: la page de fonctions</li>
+                    </ul>
+                    C'est ici qu'est affiché le détail et le résultat des différentes simulations des utilisateurs.<br>
+                    L'historique permet de lire "fichier.csv" dans lequel sont stockées les 10 dernières simulations effectuées sur l'application.
+                </p>
+                <h3 style="padding-left: 5px;">Connexion administrateur :</h3>
+                <p style="padding-left: 10px;">
+                    <ul>
+                        <li>formulaire.php</li>
+                        <li>admin.php</li>
+                        <li>action-authentification.php</li>
+                        <li>action-deconnexion.php</li>
+                        <li>mesFonctions.php</li>
+                    </ul>
+                    Lorsqu'un utilisateur spécial souhaite se connecter en tant qu'admin, il doit se rendre sur l'onglet Admin (formulaire.php).<br>
+                    Une fois sur celle-ci, il peut rentrer son login et son mot de passe qui sont préenregistrés dans "fichier_V0.csv".<br>
+                    Une fois le bouton validé cliqué, "action-authentification.php" est appellé ce qui va vérifier si le login et le mot de passe entré correspondent à celui enregisté dans le .csv.<br><br>
+                    <p class="block"><b>Page admin si l'utilisateur n'est pas connecté.</b></p>
+                    <img src="image/Si l'utilisateur n'ai pas connecté.png" width=1000><br>
+                    <p class="block"><b>Page admin si le login ne correspond pas au mot de passe ou si seulement le login est entré.</b></p>
+                    <img src="image/Si le login ne correspond pas au mdp ou si seulement le login est rentré.png" width=1000>
+                    <p class="block"><b>Page admin une fois la connexion effectuée.</b></p>
+                    <img  src="image/une fois la connexion en admin effectué.png" width=1000>
+                    <p class="block"><b>Suppression de l'historique des simulations par l'admin :</b></p>
+                    <video class="block" controls width="500">
+                        <source src="video/projetphp.mp4">
+                    </video>
+                    <br>
+                    action-deconnexion.php permet à un utilisateur spécial connecté en mod admin de le quitter. Quand celui-ci cliquera sur "déconnexion", sa session sera alors stoppée et il sera redirigé vers formulaire.php correspondant à la page de connexion au mod admin.<br><br>
+                    admin.php correspond à la page sur laquelle arrivera l'utilisateur spécial une fois qu'il aura entré son login et son mot de passe et que la connexion aura été acceptée.<br>
+                    Sur cette page, l'admin, voit un historique des différentes simulations. Il peut les effacer ou les archiver. S'il décide de les effacer, les données enregistrée seront également supprimées dans l'historique.
+                </p>
+        </div>
+        <div id="auteur" >
+            <h2>Auteurs de l'application</h2>
+            <p>
+                Cette application a été réalisé par :
+                <ul>
+                    <li>Krishnath Thevakumaran</li>
+                    <li>Mathias Engambe</li>
+                    <li>Antoine Le Corre</li>
+                    <li>Elies Hariate</li>
+                    <li>Tom Gely</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

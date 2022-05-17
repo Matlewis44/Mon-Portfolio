@@ -1,0 +1,282 @@
+h2{
+	margin-left: 10px;
+	color: black;
+	/*color: #404040; ADMINISTRATION*/
+}
+
+div{
+	color: black;
+}
+
+#index{
+	border: 2px solid;
+	border-color: #444444;
+	border-radius: 10px;
+	padding: 0px 0px 5px 10px;
+	width: 400px;
+	margin: auto;
+}
+
+label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#configuration-systeme{
+	color: #404040;
+	/*background-image: url(ressources/bannière.jpeg);*/
+}
+
+.container {
+	/*align-items: center;
+	justify-content: center;*/
+	/*display:flex;*/
+	/*min-height: 100vh;*/
+	position: relative;
+	width: 1400px;
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.container .card {
+	position: relative;
+	width: 180px;
+	text-align: center;
+	align-items: center;
+	height: 230px;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.container .card:hover {
+	transform: translateY(-5px);
+}
+
+.pourcent {
+	position: relative;
+
+}
+
+.pourcent .nombre {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.pourcent .nombre h2 {
+	font-weight: 700;
+	font-size: 40px;
+	transition: 0.5s;
+}
+
+.card:hover .pourcent .nombre h2 {
+	font-size: 50px;
+}
+
+.pourcent .nombre h2 span {
+	font-size: 24px;
+}
+
+.text {
+	position: relative;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+
+
+svg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
+}
+
+svg circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: #D3D3D3;
+	stroke-width: 10;
+	stroke-linecap: round;
+	transform: translate(5px,5px);
+}
+
+svg circle:nth-child(2) /*2eme circle*/ {
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+	stroke: #00A3D6;
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+	stroke: #D69E00;
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+	stroke: #00D68F;
+}
+
+.card:nth-child(4) svg circle:nth-child(2) {
+	stroke: #E40000;
+}
+
+.espace {
+	height: 50px;
+	width: 100%;
+	background-color: #E1E1E1;
+	margin-top: 50px;
+}
+
+.custom {
+	height: 180px;
+	width : 400px;
+	background-color: #E1E1E1;
+	position: relative;
+	text-align: center;
+	margin-left: 600px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding-top: 10px;
+	box-shadow: 5px 5px 5px #aaaaaa;
+	transition: 0.5s;
+	border-radius: 10px;
+}
+
+.custom input{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	border-radius: 4px;
+	color: white;
+	background-color: blue;
+	box-shadow: 5px 5px 5px #aaaaaa;
+	transition: 0.5s
+}
+
+.custom input:hover {
+	cursor: pointer;
+}
+
+
+.custom:hover input {
+	transform: translateY(-5px);
+	width: 170px;
+
+}
+
+#button_ok {
+  background-color: #30a5ff;
+  border: none;
+  outline-style:none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#button_rst {
+  background-color: #B9B9B9;
+  border: none;
+  outline-style:none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#valider1{
+	font-family: "ViceCitySans";
+	background-color: #30a5ff;
+	border: none;
+	outline-style:none;
+	color: white;
+	padding: 6px 6px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#annuler1{
+	font-family: "ViceCitySans";
+	background-color: #B9B9B9;
+	border: none;
+	outline-style:none;
+	color: white;
+	padding: 6px 6px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#valider{
+	font-family: "ViceCitySans";
+	background-color: #30a5ff;
+	border: none;
+	outline-style:none;
+	color: white;
+	padding: 5px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#annuler{
+	font-family: "ViceCitySans";
+	background-color: #B9B9B9;
+	border: none;
+	outline-style:none;
+	color: white;
+	padding: 5px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#texte-noir {
+	color: #444444;
+}
+
+th{
+	background-color: #908E8E;
+}
+
+@font-face {
+    font-family: "ViceCitySans";
+    src: url('fonts/ViceCitySans.otf');
+}

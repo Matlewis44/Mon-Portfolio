@@ -1,0 +1,160 @@
+head{
+	width: 100%;
+	margin: 0px;
+}
+
+#barre{
+	font-family: "Retroica";
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0px 17px 10px;
+	background:#222222;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+body{
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: "ViceCitySans";
+	color: #AAAAAA;
+}
+
+i{
+	font-family:"Fontawesome";
+}
+
+#global{
+	width: 100%;
+	min-height: 100%;
+	background-color: #FFFFFF;
+}
+
+#statut{
+	color: #404040;
+	padding: 20px 0px 17px 10px;
+}
+
+#statut p{
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu{
+	width: 20%;
+	min-height: 100%;
+	float: left;
+	padding: 0px;
+}
+
+#menu-vertical, #menu-vertical ul, #bouton-deco, #bouton-deco ul {
+	min-width: 100%;
+	min-height: 20px;
+	padding:0;
+	margin:0;
+	list-style:none;
+	display:block;
+}
+
+#menu-vertical li, #bouton-deco li {
+  position: relative;
+  margin: 0px;
+  
+}
+
+#menu-vertical a, #bouton-deco a {
+  display:block;
+  text-decoration: none;
+  text-align: middle;
+  color: #444444;
+}
+
+#menu-vertical ul, #bouton-deco ul {
+	
+	position: absolute;
+	left:-999em;
+}
+
+#menu-vertical li a, #bouton-deco li a{
+	padding: 10px 0px 10px 10px;
+}
+
+#menu-vertical li a:hover{
+	top: 0;
+	left: 180px;
+	background: #30a5ff;
+	color: #FFFFFF;
+	#dashboard{
+		src='ressources/icon_wrench.png';
+	}
+}
+
+#menu-vertical li a:focus{
+  top: 0;
+  left: 180px;
+  background: #30a5ff;
+  color: #FFFFFF;
+}
+
+#bouton-deco li a:hover{
+  top: 0;
+  left: 180px;
+  background: #cc0000;
+  color: #FFFFFF;
+}
+
+#menu-vertical i{
+	font-family:"Fontawesome";
+}
+
+
+#page{
+	width: 80%;
+	min-height: 100%;
+	float: right;
+	background-color: #e1e0e0;
+}
+
+#path{
+	background-color: #e9ecf2;
+	padding: 10px;
+	color: #000000;
+}
+
+#path a{
+	text-decoration: none;
+	color: #30a5ff;
+}
+
+#contenu{
+	min-height: 100%;
+}
+
+#configuration-systeme{
+	margin: 20px;
+	padding: 10px;
+	border: 2px solid #FFFFFF;
+	background: #FFFFFF;
+}
+
+@font-face {
+    font-family: "Retroica";
+    src: url('fonts/Retroica.ttf');
+}
+
+@font-face {
+    font-family: "ViceCitySans";
+    src: url('fonts/ViceCitySans.otf');
+}
+
+@font-face {
+    font-family: "Fontawesome";
+    src: url('fonts/fontawesome/webfonts/fa-regular-400.ttf');
+}
+
+#cercle {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+}
